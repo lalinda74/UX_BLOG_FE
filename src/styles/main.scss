@@ -82,9 +82,6 @@
 
 body{
     background: #0d0b13;
-
-    padding-top: 9%;
-
     font-family:  $font_rubik;
 }
 
@@ -174,8 +171,11 @@ body{
     width: 100vw;
     height: 80px;
     z-index: 900;
-    display: block; 
+    display: flex;
+    align-items: center; 
     color: $white100;
+    padding: 0px 9rem;
+    background: #0d0b13;
 }
 
 .sc-card-wrapper{
@@ -183,4 +183,40 @@ body{
     justify-content: center;
 
     margin-bottom: 80px;
+}
+
+.sc-body-section{
+    
+}
+
+.sc-section-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+	height: 100vh;
+	padding: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	//background-color: darkorchid;
+}
+
+section h2, section .sc-section-wrapper {
+	opacity: 0;
+	transition: opacity 5000ms;
+}
+
+section.is-visible h2, section.is-visible > .sc-section-wrapper {
+	opacity: 1;
+}
+
+section:nth-child(2n) {
+	background-color: turquoise;
+}
+
+section:nth-child(3n) {
+	background-color: tomato;
 }
